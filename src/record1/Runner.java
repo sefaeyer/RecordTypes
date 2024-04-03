@@ -26,10 +26,42 @@ public class Runner {
 
         EmployeeImmutable emp2=new EmployeeImmutable("Harry","Potter","harry@mail.com");
 
-        System.out.println("double equal ile : "+(emp==emp2));
-        System.out.println("equal ile : "+(emp.equals(emp2)));
+        System.out.println("double equal ile : "+(emp==emp2));//false
+        System.out.println("equal ile : "+(emp.equals(emp2)));//false--> artik ture dondurur.
 
-        //-- ????????? -- NEDEN ??
+
+        //peki immutable employee class ini daha az boiler plate(basma kalip)
+        // kodlarla olusturamaz miyiz??
+
+        //Cevap : Java 14 ile birlikte java ya eklenen Record yapisi ile yapabiliriz
+
+        EmployeeRecord emp3=new EmployeeRecord("Ali","Can","mail@mail.com");
+        System.out.println("Record employee : "+emp3);
+
+        System.out.println("calisan ismi : "+emp3.firstname());
+        //emp3.setLastname("Han");--> default olarak immutable dir. read-only
+
+        EmployeeRecord emp4=new EmployeeRecord("Ali","Can","mail@mail.com");
+
+        System.out.println(" == "+(emp3==emp4)); //false
+        System.out.println(" equals "+(emp3.equals(emp4))); //true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
