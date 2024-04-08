@@ -3,11 +3,10 @@ package record3;
 import java.util.ArrayList;
 import java.util.List;
 
-//DB ile ilgili islemler
+//Repo classinda DB ile ilgili islemler yapilir
 public class StudentRepo {
 
-    List<StudentDTO> students=new ArrayList<>();
-
+    List<StudentDTO> students=new ArrayList<>(); // kayitlar bu listeye eklenecek veya bu listeden cikarilacak
 
 
     //kaydetme

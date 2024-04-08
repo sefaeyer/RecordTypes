@@ -27,7 +27,8 @@ public class Runner {
         EmployeeImmutable emp2=new EmployeeImmutable("Harry","Potter","harry@mail.com");
 
         System.out.println("double equal ile : "+(emp==emp2));//false
-        System.out.println("equal ile : "+(emp.equals(emp2)));//false--> artik ture dondurur.
+        System.out.println("equal ile : "+(emp.equals(emp2)));//false--> artik ture dondurur. Cunku: equals() Object classindan bir method ve
+                                                                                            // == ile karsilastirma yapar, Biz methodu Override ettik
 
 
         //peki immutable employee class ini daha az boiler plate(basma kalip)

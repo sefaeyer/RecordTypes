@@ -14,7 +14,6 @@ public class Runner {
         repo.save(student1);
         repo.save(student2);
 
-
         //tum kayitlari listeleyelim
         System.out.println("Tum ogrenciler : ");
         repo.getAll();
@@ -23,7 +22,7 @@ public class Runner {
 
 
         //listedeki 1. indexteki ogrencinin numarasi yanlis
-        //degistirmek istiyoruz
+        //-degistirmek istiyoruz
         List<StudentDTO> list=repo.students;
 
         //cozum: yeni bir tane student objesi olusturalim
@@ -38,10 +37,6 @@ public class Runner {
         //listenin son halini goruntuleyelim
         System.out.println("Guncel Ogrenci Listesi : ");
         repo.getAll();
-
-
-
-
 
 
     }

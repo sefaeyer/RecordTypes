@@ -52,15 +52,17 @@ public class EmployeeImmutable {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
+        if (obj == null || this.getClass() != obj.getClass()) {
+            return false;
+        }
         EmployeeImmutable emp = (EmployeeImmutable) obj;
-        return Objects.equals(this.firstname, emp.firstname) &&
+        return  Objects.equals(this.firstname, emp.firstname) &&
                 Objects.equals(this.lastname, emp.lastname) &&
                 Objects.equals(this.email, emp.email);
     }
 
 
-    //objeler icin unique kodlar urtir
+    //objeler icin unique kodlar uretir
     @Override
     public int hashCode() {
         return Objects.hash(firstname,lastname,email);
